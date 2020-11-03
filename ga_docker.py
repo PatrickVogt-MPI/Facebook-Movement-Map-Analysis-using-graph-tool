@@ -39,7 +39,9 @@ def nth(iterable, n, default=None):
     "Returns the nth item or a default value"
     return next(islice(iterable, n, None), default)
     
-if __name__ == '__main__':   
+if __name__ == '__main__':
+    graphs = gc.create_movement_graphs_from_csv('./', display_runtime = True)
+              
     for g in graphs:
         print_graph_info(g)  
     
